@@ -1,14 +1,16 @@
 import React from 'react';
-
+import {Link,  } from 'react-router-dom';
 import Rate from '../Rate';
 
 import './MovieCard.css';
 
 const MovieCard = ({
-  movie: { name, date, rating, image, type, description },
+  movie: { id,name, date, rating, image, type, description },
 }) => {
   return (
-    <div className="card">
+    <Link to = {`/description/${id}`} >
+     <div className="card">
+     
       <div className="card_left">
         <img src={image} alt="poster" />
       </div>
@@ -26,13 +28,14 @@ const MovieCard = ({
         </div>
         <div className="card_right__review">
           <p>{description}</p>
-          <a href="https://www.imdb.com/?ref_=nv_home">Read More</a>
+           <a href="https://www.imdb.com/?ref_=nv_home">Read More</a> 
         </div>
         <div className="card_right__button">
-          <a href="https://www.imdb.com/?ref_=nv_home">WATCH TRAILER</a>
+           <a href="https://www.imdb.com/?ref_=nv_home">WATCH TRAILER</a>
         </div>
       </div>
-    </div>
+    </div> 
+    </Link>
   );
 };
 

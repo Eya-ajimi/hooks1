@@ -4,7 +4,7 @@ import MovieCard from './MovieCard/MovieCard';
 
 const MoviesList = ({ moviesList, nameSearch, ratingSearch }) => {
   return (
-    <div
+    <div 
       className="movies-list"
       style={{
         display: 'flex',
